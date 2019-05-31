@@ -1,0 +1,1138 @@
+Library {
+  Name			  "meaworklibrary"
+  Version		  6.5
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1255"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sun Feb 18 15:36:10 2007"
+  Creator		  "Marom"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Marom"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun Feb 18 15:50:45 2007"
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      OutDataTypeMode	      "Logical (see Configuration Parameters: Optimiza"
+"tion)"
+      LogicDataType	      "uint(8)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "meaworklibrary"
+    Location		    [-30, 234, 550, 527]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Nibble Encoder"
+      Ports		      [1, 1]
+      Position		      [130, 181, 200, 219]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskDescription	      "encodes 4-element binary (uint8) vector (most s"
+"ignificant first) to hexASCII representation (unit8)"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Nibble Encoder"
+	Location		[304, 417, 1077, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "4bit"
+	  Position		  [75, 68, 105, 82]
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "4"
+	  DataType		  "uint8"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "ASCII '0'"
+	  Position		  [371, 195, 399, 220]
+	  Orientation		  "up"
+	  NamePlacement		  "alternate"
+	  Value			  "48"
+	  VectorParams1D	  on
+	  SamplingMode		  "Sample based"
+	  OutDataTypeMode	  "uint8"
+	  OutDataType		  "sfix(16)"
+	  ConRadixGroup		  "Use specified scaling"
+	  OutScaling		  "2^0"
+	  SampleTime		  "inf"
+	  FramePeriod		  "inf"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "ASCII 'a'"
+	  Position		  [371, 20, 399, 45]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  Value			  "87"
+	  VectorParams1D	  on
+	  SamplingMode		  "Sample based"
+	  OutDataTypeMode	  "uint8"
+	  OutDataType		  "sfix(16)"
+	  ConRadixGroup		  "Use specified scaling"
+	  OutScaling		  "2^0"
+	  SampleTime		  "inf"
+	  FramePeriod		  "inf"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Convertmatrix"
+	  Position		  [50, 147, 120, 173]
+	  Value			  "[8 4 2 1]"
+	  VectorParams1D	  on
+	  SamplingMode		  "Sample based"
+	  OutDataTypeMode	  "uint8"
+	  OutDataType		  "sfix(16)"
+	  ConRadixGroup		  "Use specified scaling"
+	  OutScaling		  "2^0"
+	  SampleTime		  "inf"
+	  FramePeriod		  "inf"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Dot Product"
+	  Ports			  [2, 1]
+	  Position		  [225, 102, 255, 133]
+	  SourceBlock		  "simulink/Math\nOperations/Dot Product"
+	  SourceType		  "Dot Product"
+	  InputSameDT		  on
+	  OutputDataTypeScalingMode "Same as first input"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  LockScale		  off
+	  RndMeth		  "Floor"
+	  DoSatur		  off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  Position		  [450, 67, 505, 173]
+	  Criteria		  "u2 > Threshold"
+	  Threshold		  "9"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "add 0-9"
+	  Ports			  [2, 1]
+	  Position		  [375, 145, 395, 165]
+	  NamePlacement		  "alternate"
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "uint8"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "add a-f"
+	  Ports			  [2, 1]
+	  Position		  [375, 75, 395, 95]
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "uint8"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "hexASCII"
+	  Position		  [600, 113, 630, 127]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  DataType		  "uint8"
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  DstBlock		  "hexASCII"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "add 0-9"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "ASCII '0'"
+	  SrcPort		  1
+	  DstBlock		  "add 0-9"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "ASCII 'a'"
+	  SrcPort		  1
+	  DstBlock		  "add a-f"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "add a-f"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Dot Product"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    DstBlock		    "Switch"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 35]
+	    DstBlock		    "add 0-9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -35]
+	    DstBlock		    "add a-f"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Convertmatrix"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -35]
+	  DstBlock		  "Dot Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "4bit"
+	  SrcPort		  1
+	  Points		  [60, 0; 0, 35]
+	  DstBlock		  "Dot Product"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Serial Encoder Block"
+      Ports		      [2, 6]
+      Position		      [95, 25, 235, 145]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskDescription	      "encodes two 8 element vector A and B boolean si"
+"gnals (unit8) for MEA Serial Port"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Serial Encoder Block"
+	Location		[260, 139, 1266, 763]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "A"
+	  Position		  [25, 208, 55, 222]
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "8"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "B"
+	  Position		  [25, 368, 55, 382]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "8"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 8]
+	  Position		  [115, 310, 120, 435]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "8"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux1"
+	  Ports			  [1, 8]
+	  Position		  [115, 150, 120, 275]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "8"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Hq4"
+	  Ports			  [2, 1]
+	  Position		  [351, 85, 384, 105]
+	  Orientation		  "up"
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeMode	  "Specify via dialog"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Hq5"
+	  Ports			  [2, 1]
+	  Position		  [291, 70, 324, 90]
+	  Orientation		  "up"
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeMode	  "Specify via dialog"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Hq6"
+	  Ports			  [2, 1]
+	  Position		  [236, 55, 269, 75]
+	  Orientation		  "up"
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeMode	  "Specify via dialog"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Hq7"
+	  Ports			  [2, 1]
+	  Position		  [176, 40, 209, 60]
+	  Orientation		  "up"
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeMode	  "Specify via dialog"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Lq0"
+	  Ports			  [2, 1]
+	  Position		  [151, 515, 184, 535]
+	  Orientation		  "down"
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeMode	  "Specify via dialog"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Lq1"
+	  Ports			  [2, 1]
+	  Position		  [211, 500, 244, 520]
+	  Orientation		  "down"
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeMode	  "Specify via dialog"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Lq2"
+	  Ports			  [2, 1]
+	  Position		  [266, 485, 299, 505]
+	  Orientation		  "down"
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeMode	  "Specify via dialog"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Lq3"
+	  Ports			  [2, 1]
+	  Position		  [326, 470, 359, 490]
+	  Orientation		  "down"
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeMode	  "Specify via dialog"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [4, 1]
+	  Position		  [750, 489, 755, 546]
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [4, 1]
+	  Position		  [750, 364, 755, 421]
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  Ports			  [4, 1]
+	  Position		  [750, 294, 755, 351]
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux3"
+	  Ports			  [4, 1]
+	  Position		  [750, 224, 755, 281]
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux4"
+	  Ports			  [4, 1]
+	  Position		  [750, 154, 755, 211]
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux5"
+	  Ports			  [4, 1]
+	  Position		  [750, 29, 755, 86]
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Nibble Encoder"
+	  Ports			  [1, 1]
+	  Position		  [785, 41, 855, 79]
+	  SourceBlock		  "meaworklibrary/Nibble Encoder"
+	  SourceType		  ""
+	  ShowPortLabels	  on
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Nibble Encoder1"
+	  Ports			  [1, 1]
+	  Position		  [785, 166, 855, 204]
+	  SourceBlock		  "meaworklibrary/Nibble Encoder"
+	  SourceType		  ""
+	  ShowPortLabels	  on
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Nibble Encoder2"
+	  Ports			  [1, 1]
+	  Position		  [785, 236, 855, 274]
+	  SourceBlock		  "meaworklibrary/Nibble Encoder"
+	  SourceType		  ""
+	  ShowPortLabels	  on
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Nibble Encoder3"
+	  Ports			  [1, 1]
+	  Position		  [785, 306, 855, 344]
+	  SourceBlock		  "meaworklibrary/Nibble Encoder"
+	  SourceType		  ""
+	  ShowPortLabels	  on
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Nibble Encoder4"
+	  Ports			  [1, 1]
+	  Position		  [785, 376, 855, 414]
+	  SourceBlock		  "meaworklibrary/Nibble Encoder"
+	  SourceType		  ""
+	  ShowPortLabels	  on
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Nibble Encoder5"
+	  Ports			  [1, 1]
+	  Position		  [785, 501, 855, 539]
+	  SourceBlock		  "meaworklibrary/Nibble Encoder"
+	  SourceType		  ""
+	  ShowPortLabels	  on
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "CTLpreH"
+	  Position		  [880, 53, 910, 67]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  DataType		  "uint8"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "DATA1H"
+	  Position		  [880, 178, 910, 192]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  DataType		  "uint8"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "DATA1L"
+	  Position		  [880, 248, 910, 262]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  DataType		  "uint8"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "DATA2H"
+	  Position		  [880, 318, 910, 332]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  DataType		  "uint8"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "DATA2L"
+	  Position		  [880, 388, 910, 402]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  DataType		  "uint8"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "CTLpostL"
+	  Position		  [880, 513, 910, 527]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  DataType		  "uint8"
+	}
+	Line {
+	  SrcBlock		  "Nibble Encoder3"
+	  SrcPort		  1
+	  DstBlock		  "DATA2H"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "Nibble Encoder3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux3"
+	  SrcPort		  1
+	  DstBlock		  "Nibble Encoder2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Nibble Encoder2"
+	  SrcPort		  1
+	  DstBlock		  "DATA1L"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Lq0"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Lq1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Lq2"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Lq3"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Hq7"
+	  SrcPort		  1
+	  DstBlock		  "Mux5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Hq6"
+	  SrcPort		  1
+	  DstBlock		  "Mux5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Hq4"
+	  SrcPort		  1
+	  DstBlock		  "Mux5"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Hq5"
+	  SrcPort		  1
+	  DstBlock		  "Mux5"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Nibble Encoder"
+	  SrcPort		  1
+	  DstBlock		  "CTLpreH"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Nibble Encoder5"
+	  SrcPort		  1
+	  DstBlock		  "CTLpostL"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Nibble Encoder4"
+	  SrcPort		  1
+	  DstBlock		  "DATA2L"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux5"
+	  SrcPort		  1
+	  DstBlock		  "Nibble Encoder"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Nibble Encoder5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Nibble Encoder4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Nibble Encoder1"
+	  SrcPort		  1
+	  DstBlock		  "DATA1H"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux4"
+	  SrcPort		  1
+	  DstBlock		  "Nibble Encoder1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  8
+	  Points		  [165, 0]
+	  Branch {
+	    DstBlock		    "Lq2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [390, 0; 0, -55]
+	    DstBlock		    "Mux1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  7
+	  Points		  [225, 0]
+	  Branch {
+	    DstBlock		    "Lq3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [340, 0; 0, -25]
+	    DstBlock		    "Mux1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  Points		  [50, 0]
+	  Branch {
+	    DstBlock		    "Lq0"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [495, 0; 0, -95]
+	    DstBlock		    "Mux2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  Points		  [110, 0]
+	  Branch {
+	    DstBlock		    "Lq1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [425, 0; 0, -65]
+	    DstBlock		    "Mux2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  Points		  [135, 0]
+	  Branch {
+	    DstBlock		    "Hq6"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [390, 0; 0, -135]
+	    DstBlock		    "Mux3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [75, 0]
+	  Branch {
+	    DstBlock		    "Hq7"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [440, 0; 0, -105]
+	    DstBlock		    "Mux3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [250, 0]
+	  Branch {
+	    DstBlock		    "Hq4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [255, 0; 0, -175]
+	    DstBlock		    "Mux4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [190, 0]
+	  Branch {
+	    DstBlock		    "Hq5"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [305, 0; 0, -145]
+	    DstBlock		    "Mux4"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  8
+	  Points		  [150, 0]
+	  Branch {
+	    DstBlock		    "Lq2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [135, 0; 0, 150]
+	    DstBlock		    "Mux1"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  7
+	  Points		  [210, 0]
+	  Branch {
+	    DstBlock		    "Lq3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [85, 0; 0, 150]
+	    DstBlock		    "Mux1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  6
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "Lq0"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [270, 0; 0, 110]
+	    DstBlock		    "Mux2"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  5
+	  Points		  [95, 0]
+	  Branch {
+	    DstBlock		    "Lq1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [220, 0; 0, 110]
+	    DstBlock		    "Mux2"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  4
+	  Points		  [120, 0]
+	  Branch {
+	    DstBlock		    "Hq6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [205, 0; 0, 70]
+	    DstBlock		    "Mux3"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  3
+	  Points		  [60, 0]
+	  Branch {
+	    DstBlock		    "Hq7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [275, 0; 0, 70]
+	    DstBlock		    "Mux3"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  2
+	  Points		  [235, 0]
+	  Branch {
+	    DstBlock		    "Hq4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [110, 0; 0, 30]
+	    DstBlock		    "Mux4"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux1"
+	  SrcPort		  1
+	  Points		  [175, 0]
+	  Branch {
+	    DstBlock		    "Hq5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [180, 0; 0, 30]
+	    DstBlock		    "Mux4"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "A"
+	  SrcPort		  1
+	  DstBlock		  "Demux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "B"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
